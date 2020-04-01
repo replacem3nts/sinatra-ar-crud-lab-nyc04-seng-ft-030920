@@ -1,0 +1,13 @@
+<h1>Here are the current articles:</h1>
+
+<% @articles.each do |article|%>
+    <ul>
+        <li>
+            <a href='<%="/articles/#{article.id}"%>'>
+                <%=article.title%>
+            </a>
+        </li>
+    </ul>
+<%end%>
+
+<a href='<%="/articles/new"%>'>Create an Article</a>
